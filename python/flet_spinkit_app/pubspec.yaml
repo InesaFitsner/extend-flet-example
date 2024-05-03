@@ -1,0 +1,5 @@
+dependencies:
+  flet_spinkit:
+    path: /Users/inesa/Documents/projects/flet-dev/flutter-package-test/flet_spinkit
+
+dependency_overrides:
