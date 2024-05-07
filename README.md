@@ -1,7 +1,7 @@
 # extend-flet-example
 Integrating existing Flutter packages into Flet app example
 
-# if python interpreter is notr selected
+# if python interpreter is not selected
 Virtualenv
 Executable:     /Users/inesa/Library/Caches/pypoetry/virtualenvs/flet-spinkit-E2zIzyoK-py3.11/bin/python
 command shift p -> select interpreter -> enter interpreter path -> <Executable>
@@ -15,7 +15,7 @@ should show red rectangle "unknown control"
 ## Unset FLET_VIEW_PATH
 
 printenv | grep FLET
-check if environment variables are there.
+(check if environment variables are there)
 Output:
 FLET_VIEW_PATH=/Users/inesa/Documents/projects/flet-dev/flet/client/build/macos/Build/Products/Release
 FLET_WEB_PATH=/Users/inesa/Documents/projects/flet-dev/flet/client/build/web

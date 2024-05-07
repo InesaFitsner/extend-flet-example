@@ -1,5 +1,6 @@
 //library flet_spinkit;
 
+import 'package:flet/flet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -12,7 +13,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class SpinkitControl extends StatelessWidget {
   // final Control? parent;
-  // final Control control;
+  final Control control;
   // final List<Control> children;
   // final bool parentDisabled;
   // final bool? parentAdaptive;
@@ -20,7 +21,7 @@ class SpinkitControl extends StatelessWidget {
   const SpinkitControl({
     super.key,
     // required this.parent,
-    // required this.control,
+    required this.control,
     // required this.children,
     // required this.parentDisabled,
     // required this.parentAdaptive,
@@ -30,8 +31,8 @@ class SpinkitControl extends StatelessWidget {
   Widget build(BuildContext context) {
     //debugPrint("Spinkit build: ${control.id}");
 
-    //var color = control.attrColor("color", context);
-    var color = Colors.blue;
+    var color = control.attrColor("color", context);
+    //var color = Colors.blue;
 
     return SpinKitRotatingCircle(
       color: color,
