@@ -1,7 +1,7 @@
 # extend-flet-example
 Integrating existing Flutter packages into Flet app example
 
-# if python interpreter is not selected
+### tip: if python interpreter is not selected
 Virtualenv
 Executable:     /Users/inesa/Library/Caches/pypoetry/virtualenvs/flet-spinkit-E2zIzyoK-py3.11/bin/python
 command shift p -> select interpreter -> enter interpreter path -> <Executable>
