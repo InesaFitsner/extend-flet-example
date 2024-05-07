@@ -7,12 +7,11 @@ from flet_core.ref import Ref
 
 class Spinkit(Control):
     """
-    Spinkit Control
+    Spinkit Control.
     """
 
     def __init__(
         self,
-        color: Optional[str] = None,
         #
         # Control
         #
@@ -29,26 +28,15 @@ class Spinkit(Control):
             data=data,
         )
 
-        self.color = color
-
     def _get_control_name(self):
         return "spinkit"
-
-    # color
-    @property
-    def color(self):
-        return self._get_attr("color")
-
-    @color.setter
-    def color(self, value):
-        self._set_attr("color", value)
 
 
 def main(page: ft.Page):
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
 
-    page.add(Spinkit(color=ft.colors.AMBER))
+    page.add(Spinkit())
 
 
 ft.app(main)
