@@ -31,8 +31,8 @@ class SpinkitControl extends StatelessWidget {
   Widget build(BuildContext context) {
     //debugPrint("Spinkit build: ${control.id}");
 
-    //var color = control.attrColor("color", context);
-    var color = Colors.green;
+    var color = control.attrColor("color", context);
+    //var color = Colors.green;
 
     return SpinKitRotatingCircle(
       color: color,
