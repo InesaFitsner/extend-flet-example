@@ -5,7 +5,10 @@ import 'spinkit.dart';
 CreateControlFactory createControl = (CreateControlArgs args) {
   switch (args.control.type) {
     case "spinkit":
-      return const SpinkitControl();
+      return SpinkitControl(
+        parent: args.parent,
+        control: args.control,
+      );
     default:
       return null;
   }
