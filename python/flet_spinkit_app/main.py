@@ -6,7 +6,7 @@ def main(page: ft.Page):
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
 
-    page.add(Spinkit(opacity=0.5))
+    page.add(Spinkit(opacity=0.5, tooltip="Spinkit tooltip"))
 
 
 ft.app(main)
