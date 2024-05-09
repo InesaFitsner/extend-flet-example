@@ -14,11 +14,14 @@ class SpinkitControl extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var color = control.attrColor("color", context);
+    var size = control.attrDouble("size");
+
     return constrainedControl(
         context,
-        const SpinKitRotatingCircle(
-          color: Colors.green,
-          size: 100.0,
+        SpinKitRotatingCircle(
+          color: color,
+          size: size ?? 50,
         ),
         parent,
         control);

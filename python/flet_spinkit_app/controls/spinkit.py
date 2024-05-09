@@ -25,6 +25,11 @@ class Spinkit(ConstrainedControl):
         top: OptionalNumber = None,
         right: OptionalNumber = None,
         bottom: OptionalNumber = None,
+        #
+        # Spinkit specific
+        #
+        color: Optional[str] = None,
+        size: OptionalNumber = None,
     ):
         ConstrainedControl.__init__(
             self,
@@ -38,5 +43,26 @@ class Spinkit(ConstrainedControl):
             bottom=bottom,
         )
 
+        self.color = color
+        self.size = size
+
     def _get_control_name(self):
         return "spinkit"
+
+    # color
+    @property
+    def color(self):
+        return self._get_attr("color")
+
+    @color.setter
+    def color(self, value):
+        self._set_attr("color", value)
+
+    # size
+    @property
+    def size(self):
+        return self._get_attr("size")
+
+    @size.setter
+    def size(self, value):
+        self._set_attr("size", value)
