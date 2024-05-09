@@ -77,9 +77,12 @@ class Spinkit(ConstrainedControl):
 
     # spinkit_type
     @property
-    def spinkit_type(self):
-        return self._get_attr("spinkittype")
+    def spinkit_type(self) -> Optional[SpinkitType]:
+        return self.__spinkit_type
 
     @spinkit_type.setter
-    def spinkit_type(self, value):
-        self._set_attr("spinkittype", value)
+    def spinkit_type(self, value: Optional[SpinkitType]):
+        self.__spinkit_type = value
+        self._set_attr(
+            "spinkittype", value.value if isinstance(value, SpinkitType) else value
+        )
