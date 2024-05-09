@@ -9,7 +9,7 @@ class SpinkitControl extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SpinKitRotatingCircle(
-      color: Colors.green,
+      color: Colors.amber,
       size: 100.0,
     );
   }

@@ -1,7 +1,4 @@
-from typing import Any, Optional
-
-from flet_core.control import Control, OptionalNumber
-from flet_core.ref import Ref
+from flet_core.control import Control
 
 
 class Spinkit(Control):
@@ -9,23 +6,8 @@ class Spinkit(Control):
     Spinkit Control.
     """
 
-    def __init__(
-        self,
-        #
-        # Control
-        #
-        ref: Optional[Ref] = None,
-        opacity: OptionalNumber = None,
-        visible: Optional[bool] = None,
-        data: Any = None,
-    ):
-        Control.__init__(
-            self,
-            ref=ref,
-            opacity=opacity,
-            visible=visible,
-            data=data,
-        )
+    def __init__(self):
+        Control.__init__(self)
 
     def _get_control_name(self):
         return "spinkit"
