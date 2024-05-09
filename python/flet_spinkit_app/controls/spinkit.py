@@ -15,28 +15,16 @@ class Spinkit(Control):
         #
         # Control
         #
-        ref: Optional[Ref] = None,
-        expand: Union[None, bool, int] = None,
-        expand_loose: Optional[bool] = None,
-        col: Optional[ResponsiveNumber] = None,
         opacity: OptionalNumber = None,
         tooltip: Optional[str] = None,
         visible: Optional[bool] = None,
-        disabled: Optional[bool] = None,
         data: Any = None,
-        rtl: Optional[bool] = None,
     ):
         Control.__init__(
             self,
-            ref=ref,
-            expand=expand,
-            expand_loose=expand_loose,
-            col=col,
             tooltip=tooltip,
             opacity=opacity,
             visible=visible,
-            disabled=disabled,
-            rtl=rtl,
             data=data,
         )
 
