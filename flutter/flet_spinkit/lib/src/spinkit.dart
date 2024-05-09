@@ -16,14 +16,29 @@ class SpinkitControl extends StatelessWidget {
   Widget build(BuildContext context) {
     var color = control.attrColor("color", context);
     var size = control.attrDouble("size");
+    var spinkitType = control.attrString("spinkittype");
+    late Widget spinkitControl;
 
-    return constrainedControl(
-        context,
-        SpinKitRotatingCircle(
+    switch (spinkitType) {
+      case "rotatingcircle":
+        spinkitControl = SpinKitRotatingCircle(
           color: color,
           size: size ?? 50,
-        ),
-        parent,
-        control);
+        );
+        break;
+      case "foldingcube":
+        spinkitControl = SpinKitFoldingCube(
+          color: color,
+          size: size ?? 50,
+        );
+        break;
+      default:
+        spinkitControl = SpinKitPumpingHeart(
+          color: color,
+          size: size ?? 50,
+        );
+    }
+
+    return constrainedControl(context, spinkitControl, parent, control);
   }
 }

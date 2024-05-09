@@ -1,7 +1,13 @@
+from enum import Enum
 from typing import Any, Optional
 
 from flet_core.constrained_control import ConstrainedControl
 from flet_core.control import OptionalNumber
+
+
+class SpinkitType(Enum):
+    ROTATING_CIRCLE = "rotatingcircle"
+    FOLDING_CUBE = "foldingcube"
 
 
 class Spinkit(ConstrainedControl):
@@ -30,6 +36,7 @@ class Spinkit(ConstrainedControl):
         #
         color: Optional[str] = None,
         size: OptionalNumber = None,
+        spinkit_type: Optional[SpinkitType] = None,
     ):
         ConstrainedControl.__init__(
             self,
@@ -45,6 +52,7 @@ class Spinkit(ConstrainedControl):
 
         self.color = color
         self.size = size
+        self.spinkit_type = spinkit_type
 
     def _get_control_name(self):
         return "spinkit"
@@ -66,3 +74,12 @@ class Spinkit(ConstrainedControl):
     @size.setter
     def size(self, value):
         self._set_attr("size", value)
+
+    # spinkit_type
+    @property
+    def spinkit_type(self):
+        return self._get_attr("spinkittype")
+
+    @spinkit_type.setter
+    def spinkit_type(self, value):
+        self._set_attr("spinkittype", value)

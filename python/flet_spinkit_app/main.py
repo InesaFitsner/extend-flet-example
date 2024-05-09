@@ -1,5 +1,5 @@
 import flet as ft
-from controls.spinkit import Spinkit
+from controls.spinkit import Spinkit, SpinkitType
 
 
 def main(page: ft.Page):
@@ -17,6 +17,7 @@ def main(page: ft.Page):
                     left=0,
                     color=ft.colors.PURPLE,
                     size=150,
+                    spinkit_type=SpinkitType.FOLDING_CUBE,
                 ),
             ]
         )
