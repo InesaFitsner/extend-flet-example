@@ -2,7 +2,7 @@
 # extend-flet-example
 Integrating existing Flutter packages into Flet app example
 
-# if python interpreter is not selected
+### if python interpreter is not selected
 Virtualenv
 Executable:     /Users/inesa/Library/Caches/pypoetry/virtualenvs/flet-spinkit-E2zIzyoK-py3.11/bin/python
 command shift p -> select interpreter -> enter interpreter path -> <Executable>
@@ -17,10 +17,12 @@ should show red rectangle "unknown control"
 
 printenv | grep FLET
 (check if environment variables are there)
+
 You will get output with values of environment variables with FLET is their name were set before :
 FLET_VIEW_PATH=<path>
 FLET_WEB_PATH=<path>
 
+Unset FLET_VIEW_PATH:
 If FLET_VIEW_PATH is not enmpty, unset it by running this commands:
 export FLET_VIEW_PATH=
 
