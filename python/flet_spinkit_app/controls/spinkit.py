@@ -1,8 +1,6 @@
-from typing import Any, Optional, Union
+from typing import Any, Optional
 
 from flet_core.control import Control, OptionalNumber
-from flet_core.ref import Ref
-from flet_core.types import ResponsiveNumber
 
 
 class Spinkit(Control):
