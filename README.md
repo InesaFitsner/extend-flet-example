@@ -2,16 +2,7 @@
 # extend-flet-example
 Integrating existing Flutter packages into Flet app example
 
-### if python interpreter is not selected
-Virtualenv
-Executable:     /Users/inesa/Library/Caches/pypoetry/virtualenvs/flet-spinkit-E2zIzyoK-py3.11/bin/python
-command shift p -> select interpreter -> enter interpreter path -> <Executable>
-
 ## Connect Python and Flutter
-
-### run python app
-poetry run flet run (in current dir)
-should show red rectangle "unknown control"
 
 ### Unset FLET_VIEW_PATH
 
@@ -26,6 +17,13 @@ Unset FLET_VIEW_PATH:
 If FLET_VIEW_PATH is not enmpty, unset it by running this commands:
 export FLET_VIEW_PATH=
 
+### create pubspec.yaml in the same directory as main.py
+
+```yaml
+dependencies:
+  flet_spinkit:
+    path: {absolute-path-to-flet-dart-package-folder}
+```
 ### build macos app
 (you have to be in the folder were your main.py is)
 poetry run flet build macos
