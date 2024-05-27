@@ -3,6 +3,25 @@
 
 Integrating existing Flutter packages into Flet app example
 
+## Create Flet Dart package
+
+```
+flutter create --template=package <package_name>
+```
+
+Flet Dart package should consist of the following files:
+```
+└── <package_name>
+    ├── lib
+    │   ├── <package_name>.dart
+    │   └── src
+    │       ├── create_control.dart
+    │       └── <control_name>.dart
+    └── pubspec.yaml
+```
+
+## Create Flet Python control and app that uses it
+
 ## Connect Python and Flutter
 
 ### Unset FLET_VIEW_PATH
