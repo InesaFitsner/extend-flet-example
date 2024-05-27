@@ -26,8 +26,14 @@ dependencies:
 ```
 ### build macos app
 (you have to be in the folder were your main.py is)
+
+```
 poetry run flet build macos
+```
 
 ### run compiled app
 (you have to be in the folder were your main.py is, or use full path)
+
+```
 open build/macos/flet_spinkit_app.app
+```
