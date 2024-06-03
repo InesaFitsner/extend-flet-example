@@ -58,6 +58,11 @@ dependencies:
 poetry run flet build macos
 ```
 
+To show more logs:
+```
+poetry run flet build macos -v
+```
+
 ### run compiled app
 (you have to be in the folder were your main.py is, or use full path)
 
