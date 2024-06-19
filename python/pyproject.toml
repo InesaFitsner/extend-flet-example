@@ -8,7 +8,7 @@ packages = [{include = "flet_spinkit"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-flet = "^0.22.1"
+flet = "^0.23.0"
 
 
 [build-system]
