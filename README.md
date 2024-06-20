@@ -69,3 +69,16 @@ poetry run flet build macos -v
 ```
 open build/macos/flet_spinkit_app.app
 ```
+
+### if you need to upgrade flet version
+
+- change flet dependency to a new version in both python/pyproject.toml and flutter/flet_spinkit/pubspec.yaml
+- while in python folder, run:
+  ```
+  poetry lock
+  ```
+  ```
+  poetry install
+  ```
+- now build macos app and run compiled app
+
